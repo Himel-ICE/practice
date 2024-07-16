@@ -1,0 +1,396 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+}
+
+body {
+    width: 100%;
+}
+/* top-bar start */
+.top-ber {
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #573b8a;
+    z-index: 1;
+}
+
+    .top-ber .menu {
+        color: aliceblue;
+        position: relative;
+        top: 12px;
+        left: 10px;
+        display: none;
+        cursor: pointer;
+    }
+
+    .top-ber .logo {
+        position: relative;
+        top: 10px;
+        left: 20px;
+    }
+
+        .top-ber .logo p {
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(255, 94, 94);
+        }
+
+.left-section {
+    display: flex;
+}
+
+.right-section {
+    display: flex;
+}
+
+    .right-section .notifications {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 0px;
+        right: 35px;
+        color: rgb(227, 230, 233);
+    }
+
+        .right-section .notifications .message {
+            display: flex;
+            position: relative;
+            right: 10px;
+            padding: 3px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+            .right-section .notifications .message:hover {
+                background-color: #716098;
+            }
+
+        .right-section .notifications .notification {
+            display: flex;
+            position: relative;
+            right: 10px;
+            padding: 3px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+            .right-section .notifications .notification:hover {
+                background-color: #716098;
+            }
+
+        .right-section .notifications span {
+            padding: 2px;
+            margin: 2px;
+        }
+
+        .right-section .notifications p {
+            height: 13px;
+            width: 15px;
+            font-size: 10px;
+            font-weight: bold;
+            background-color: rgb(255, 0, 0);
+            color: aliceblue;
+            border-radius: 3px;
+            text-align: center;
+        }
+
+    .right-section .profile {
+        display: flex;
+        position: relative;
+        top: 7px;
+        right: 20px;
+        padding: 0 5px 0 5px;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+        .right-section .profile .profile-name {
+            position: relative;
+            right: 10px;
+            text-align: center;
+        }
+
+            .right-section .profile .profile-name .name {
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            .right-section .profile .profile-name .admin {
+                color: rgba(0, 255, 26, 0.955);
+                font-size: 12px;
+            }
+
+    .right-section .profile-photo img {
+        height: 55x;
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    .right-section .profile-photo {
+        display: inline;
+        height: 50x;
+        width: 50px;
+        border-radius: 50%;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .right-section .message-section {
+        display: block;
+        height: auto;
+        width: auto;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: rgba(228, 234, 232, 0.76);
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px 1px rgb(143, 143, 143);
+    }
+
+.message-section .sms {
+    display: none;
+    margin: 10px;
+    height: auto;
+    width: auto;
+}
+
+.message-section .notice {
+    display: none;
+    margin: 10px;
+    height: auto;
+    width: auto;
+}
+
+.message-section .text {
+    margin: 5px;
+    cursor: pointer;
+}
+
+    .message-section .text h5 {
+        color: #2f2f2f;
+    }
+
+    .message-section .text p {
+        color: #555353;
+        font-size: 12px;
+    }
+
+.message-section .own-profile {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 3px;
+    width: 250px;
+    height: 300px;
+    background-color: rgb(241, 238, 243);
+}
+
+.own-profile .employe-profile img {
+    border-radius: 50%;
+}
+
+.own-profile h4 {
+    margin-top: 5px;
+    color: #4f475c;
+}
+
+.own-profile h5 {
+    font-size: 12px;
+    color: #534d5c;
+}
+
+.own-profile p {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.own-profile .employe-logout {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 0px 15px 5px 15px;
+    background-color: #493676;
+    color: white;
+    height: auto;
+    width: auto;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+    .own-profile .employe-logout:hover {
+        box-shadow: 2px 2px 10px 2px rgb(146, 144, 149);
+    }
+
+/* top-bar end */
+
+
+
+.main-body {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(238, 235, 241);
+    height: 87dvh;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: absolute;
+    top: 55px;
+}
+    /* side-bar start */
+    .main-body .side-bar {
+        position: relative;
+        left: 3px;
+        margin-right: 13px;
+        padding: 15px;
+        width: auto;
+        padding: auto;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        transition: left 0.3s ease;
+    }
+
+.side-bar .close-btn {
+    display: none;
+    position: relative;
+    right: -10px;
+    text-align: right;
+}
+
+    .side-bar .close-btn span {
+        padding: 3px;
+        color: rgb(108, 108, 108);
+        cursor: pointer;
+    }
+
+.side-bar .icon {
+    display: flex;
+    margin-top: 10px;
+    color: #493676;
+    font-size: 16px;
+    background-color: #e2deeb;
+    border-radius: 10px;
+    box-shadow: 0px 3px 9px 1px #9475bc;
+}
+
+    .side-bar .icon p {
+        display: inline-block;
+        margin: 5px 10px 0px 10px;
+        padding: 5px;
+    }
+
+    .side-bar .icon span {
+        margin: 10px 0px 0px 10px;
+        text-align: center;
+    }
+
+    .side-bar .icon:hover {
+        background-color: #573b8a;
+        color: rgb(239, 236, 242);
+        transition: .1s ease;
+        cursor: pointer;
+    }
+
+.side-bar .logout {
+    display: flex;
+    position: relative;
+    top: 20%;
+    margin-top: 10px;
+    color: #493676;
+    font-size: 18px;
+    background-color: #e2deeb;
+    border-radius: 10px;
+    box-shadow: 0px 3px 9px 1px #9475bc;
+}
+
+    .side-bar .logout span {
+        color: rgb(108, 108, 108);
+        cursor: pointer;
+        display: flex;
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+
+    .side-bar .logout p {
+        color: rgb(108, 108, 108);
+        margin-left: 10px;
+        padding: 5px;
+    }
+
+    .side-bar .logout:hover {
+        font-size: 14px;
+        font-weight: bold;
+        background-color: #ffffff;
+        transition: .1s ease;
+        cursor: pointer;
+    }
+
+.main-body .content {
+    position: relative;
+    right: 0px;
+    left: 240px;
+    height: 100%;
+    width: auto;
+    background-color: rgb(245, 249, 247);
+}
+
+
+
+
+@media (max-width : 1200px) {
+
+    .side-bar .icon span {
+        margin: 0px;
+        padding: 15px;
+    }
+
+    .side-bar .icon p {
+        display: none;
+    }
+
+    .side-bar .logout {
+        justify-content: center;
+        align-items: center;
+    }
+
+        .side-bar .logout span {
+            margin: 0px;
+            padding: 15px;
+        }
+
+        .side-bar .logout p {
+            display: none;
+        }
+}
+
+@media (max-width : 550px) {
+    .side-bar .close-btn {
+        display: block;
+    }
+
+    .main-body .side-bar {
+        display: none;
+    }
+
+    .side-bar .icon p {
+        display: block;
+    }
+
+    .top-ber .menu {
+        display: block;
+    }
+
+    .main-body .content {
+        width: 100%;
+    }
+}

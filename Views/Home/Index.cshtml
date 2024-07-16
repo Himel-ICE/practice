@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using practice.Models
+
+<div class="main" style="display:flex">
+    <div class="table-container">
+        <h2>Table-1</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Number of Products</th>
+                    <th>Entry Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    List<Equipment> equipment = Equipment.EquipmentList();
+                    if (equipment != null && equipment.Count > 0)
+                    {
+                        foreach (Equipment item in equipment)
+                        {
+                            <tr>
+                                <td>@item.Name</td>
+                                <td>@item.count</td>
+                                <td>@item.DateTime</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="3">No data available</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-container">
+        <h2>Table-2</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Member Name</th>
+                    <th>Member Designation</th>
+                    <th>Phone No.</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    List<Equipment> assignedMember = Equipment.AssignedMembers();
+                    if (assignedMember != null && assignedMember.Count > 0)
+                    {
+                        foreach (Equipment item in assignedMember)
+                        {
+                            <tr>
+                                <td>@item.Name</td>
+                                <td>@item.member.MemberName</td>
+                                <td>@item.member.MemberDesignation</td>
+                                <td>@item.member.MemberPhoneNumber</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4">No data available</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+    .main {
+        display: flex;
+    }
+
+    .table-container {
+        overflow: auto;
+        resize: both;
+        max-height: 400px;
+        margin-right: 20px;
+    }
+
+    table {
+        padding: 5px;
+        margin-top: 5px;
+        text-align: center;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 3px;
+        border: 1px solid #000;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 15px;
+    }
+</style>
